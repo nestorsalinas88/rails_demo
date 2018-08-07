@@ -13,7 +13,7 @@ two:
   price: 9.99
 
 ruby:
-  title: Programming Ruby
+  title: Programming Ruby 1.9
   description: many things to say in this description. I dont even know where to start. Can you please help me think of more things to write in this thing.
   price: 23.24
   image_url: ruby.jpg
