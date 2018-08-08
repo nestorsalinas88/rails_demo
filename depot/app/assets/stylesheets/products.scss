@@ -19,11 +19,10 @@
   tr.list_line_odd {
     background-color: papayawhip;
   }
-  tr.image {
+  td.image {
   //  hide this in mobil view
     display: none;
-  }
-  td.image {
+
   //  assume anything bigger than 30em
   //  is a non-mobile device and can fit the image
     @media(min-width: 30em) {
