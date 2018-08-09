@@ -1,15 +1,29 @@
 // Place all the styles related to the Store controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+main.store{ width: 100%}
 .store {
-  max-width: 80em;
+  max-width: 100%;
+  h1{
+    text-align: center;
+    font-size: 5em;
+
+  }
   ul.catalog {
     border-top: solid 0.25em;
     list-style: none;
     padding: 0;
     margin: 0;
     li {
+      p{
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .title {
+        text-align: center;
+        font-size: 2em;
+
+      }
       padding: 1em;
       margin: 0;
       border-bottom: solid thin #ddd;
@@ -30,6 +44,8 @@
       }
       .price {
         font-size: 1.414em;
+        float: right;
+        margin-top: 5em;
       }
       form, div {
         display: inline;

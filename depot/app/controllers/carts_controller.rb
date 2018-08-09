@@ -62,19 +62,25 @@ class CartsController < ApplicationController
     end
   end
 
-  private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
-      @cart = Cart.find(session[:cart_id])
-    rescue ActiveRecord::RecordNotFound
-      @cart = Cart.create
-      session[:cart_id] = @cart.id
+      @cart = Cart.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cart_params
       params.fetch(:cart, {})
     end
+
+  module CurrentCart
+    private
+    def set_cart
+      @cart = Cart.find(session[:cart_id])
+    rescue ActiveRecord::RecordNotFound
+      @cart = Cart.create
+      session[:cart_id] = @cart.id
+    end
+  end
 
     def invalid_cart
       logger.error "Attempt to access invalid cart #{params[:id]}"
